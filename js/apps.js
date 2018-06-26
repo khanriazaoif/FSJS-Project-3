@@ -10,9 +10,11 @@ function tshirtColor(){
 design.onchange = function(){
   let design=document.getElementById("design");
   if(design[design.selectedIndex].value == "js puns") {
-    console.log("That's correct!"); 
+    let jsPuns = document.getElementById("design").value;
+    console.log(jsPuns);
   } else {
-    console.log("You're wrong");
+    let heartJs = document.getElementById("design").value;
+    console.log(heartJs);
   }
  }
 }
