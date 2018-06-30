@@ -11,16 +11,14 @@ function tshirtColor(){
 design.onchange = function(){
   let design = document.getElementById("design");
   if(design[design.selectedIndex].value == "js puns") {
-    let colorId = document.getElementById("color");
-    // console.log(colorId);
+    let colorId = document.querySelector('#color option').textContent;
     for(let i = 0; i < colorId.length; i++ ){
-      let a = colorId.options[i].text;
-      if(colorId[i].text.includes("JS Puns")){
-        colorId.style.display = "none";
+      if(colorId.includes("JS Puns")){
+        //colorId.style.display = "none";
         console.log(colorId);
         console.log("Includes JS Puns");
       } else {
-        colorId.style.display = "block";
+        //colorId.style.display = "block";
         console.log(colorId);
         console.log("Does not include");
         }
