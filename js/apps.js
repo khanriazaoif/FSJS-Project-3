@@ -9,7 +9,8 @@ window.onload = function() {
 
 function tshirtColor(){
 design.onchange = function(){
-  let design = document.getElementById("design");
+  //let design = document.getElementById("design");
+  console.log(design);
   if(design[design.selectedIndex].value == "js puns") {
     let colorId = document.getElementById("color");
     // console.log(colorId);
@@ -28,6 +29,7 @@ design.onchange = function(){
     } else {
     let heartJs = document.getElementById("design").value;
     console.log(heartJs);
+
   }
  }
 }
