@@ -4,26 +4,30 @@ window.onload = function() {
     document.getElementById("name").focus();
   };
 
+  let design = document.getElementById("design");
+
   //”T-Shirt Info” section of the form:
 //For the T-Shirt "Color" menu, only display the color options that match the design selected in the "Design" menu.
 
 function tshirtColor(){
 design.onchange = function(){
-  //let design = document.getElementById("design");
-  console.log(design);
+  //console.log(design);
   if(design[design.selectedIndex].value == "js puns") {
     let colorId = document.getElementById("color");
-    // console.log(colorId);
+    //console.log(colorId);
     for(let i = 0; i < colorId.length; i++ ){
       let a = colorId.options[i].text;
+     // console.log(a);
       if(colorId[i].text.includes("JS Puns")){
-        colorId.style.display = "none";
+        console.log(colorId[i]);
+        colorId[i].style.display = "block";
         console.log(colorId);
-        console.log("Includes JS Puns");
+        //console.log("Includes JS Puns");
       } else {
-        colorId.style.display = "block";
-        console.log(colorId);
-        console.log("Does not include");
+        colorId[i].style.display = "none";
+       // console.log(colorId);
+        //console.log(colorId);
+       // console.log("Does not include");
         }
       }
     } else {
