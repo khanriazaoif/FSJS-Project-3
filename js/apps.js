@@ -11,29 +11,28 @@ window.onload = function() {
 
 function tshirtColor(){
 design.onchange = function(){
-  //console.log(design);
   if(design[design.selectedIndex].value == "js puns") {
     let colorId = document.getElementById("color");
-    //console.log(colorId);
     for(let i = 0; i < colorId.length; i++ ){
       let a = colorId.options[i].text;
-     // console.log(a);
       if(colorId[i].text.includes("JS Puns")){
-        console.log(colorId[i]);
         colorId[i].style.display = "block";
-        console.log(colorId);
-        //console.log("Includes JS Puns");
       } else {
         colorId[i].style.display = "none";
-       // console.log(colorId);
-        //console.log(colorId);
-       // console.log("Does not include");
-        }
+      }
+        
       }
     } else {
-    let heartJs = document.getElementById("design").value;
-    console.log(heartJs);
-
+      let colorId = document.getElementById("color");
+      for(let i = 0; i < colorId.length; i++ ){
+        let a = colorId.options[i].text;
+        if(colorId[i].text.includes("JS shirt only")){
+          colorId[i].style.display = "block";
+        } else {
+          colorId[i].style.display = "none";
+          }
+          
+        }
   }
  }
 }
