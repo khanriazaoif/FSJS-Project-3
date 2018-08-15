@@ -9,9 +9,18 @@ window.onload = function() {
   //”T-Shirt Info” section of the form:
 //For the T-Shirt "Color" menu, only display the color options that match the design selected in the "Design" menu.
 
+function hideAndShowJobRoleOnOther(){
+   const valueOther = document.getElementById('other-title');
+   valueOther.style.display = "none";
+   const selectId = document.getElementById('title');   
+   selectId.onchange = function showJobRoleOnOther(){
+       valueOther.style.display = "block";
+      }
+  }
+
+
 function tshirtColor(){
 design.onchange = function(){
-  console.log(design[design.selectedIndex].value);
   if(design[design.selectedIndex].value === "js puns" && "heart js" && "Select Theme"){
     let colorId = document.getElementById("color");
     for(let i = 0; i < colorId.length; i++ ){
@@ -23,11 +32,9 @@ design.onchange = function(){
         
       }
     } else if (design[design.selectedIndex].value === "heart js"){
-      console.log(design[design.selectedIndex].value);
       let colorId = document.getElementById("color");
       for(let i = 0; i < colorId.length; i++ ){
         if(colorId[i].text.includes("JS shirt only")){
-          console.log(colorId[i]);
           colorId[i].style.display = "block";
         } else {
           colorId[i].style.display = "none";
@@ -35,7 +42,6 @@ design.onchange = function(){
           
         }
     } else {
-      console.log(design[design.selectedIndex].value);
       let colorId = document.getElementById("color");
       for(let i = 0; i < colorId.length; i++ ){
         if(colorId[i].text.includes("")){
@@ -49,5 +55,5 @@ design.onchange = function(){
     }
   }
 }
-
+hideAndShowJobRoleOnOther();
 tshirtColor();
