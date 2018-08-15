@@ -56,3 +56,62 @@ function tshirtColor() {
 }
 hideAndShowJobRoleOnOther();
 tshirtColor();
+
+// let classActivities = document.getElementsByClassName("activities")[0];
+// console.log(classActivities[0]);
+// console.log(classActivities);
+// function yes(){
+//   console.log('before foor loop');
+// for (let i = 0; i < classActivities.length; i++) {
+//   console.log('hello');
+//   if(classActivities[i].text.includes('js-frameworks')){
+//     classActivities[i].style.display = "block";
+//   } else {
+//     classActivities[i].style.display = "none";
+//   }
+// }
+// }
+// yes()
+
+const activitiesObject = [
+  {
+    name: "all",
+    cost: 200
+  },
+  {
+    name: "js-frameworks",
+    day: "Tuesday",
+    time: "9am-12pm",
+    cost: 100
+  },
+  {
+    name: "js-libs",
+    day: "Tuesday",
+    time: "1pm-4pm",
+    cost: 100
+  },
+  {
+    name: "express",
+    day: "Tuesday",
+    time: "9am-12pm",
+    cost: 100
+  },
+  {
+    name: "node",
+    day: "Tuesday",
+    time: "1pm-4pm",
+    cost: 100
+  },
+  {
+    name: "build-tools",
+    day: "Wednesday",
+    time: "9am-12pm",
+    cost: 100
+  },
+  {
+    name: "npm",
+    day: "Wednesday",
+    time: "1pm-4pm",
+    cost: 100
+  }
+];
