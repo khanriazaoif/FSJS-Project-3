@@ -115,3 +115,33 @@ const activitiesObject = [
     cost: 100
   }
 ];
+
+// for (let i = 0; i < activitiesObject.length; i ++) {
+//   let item = activitiesObject[i];
+//   console.log(item);
+// }
+
+document.addEventListener('change', (e) => {
+  const checkbox = event.target;
+  console.log(checkbox.name);
+  const checked = checkbox.checked;
+  console.log(checked);
+  //const listItem = checkbox.parentNode.parentNode;
+  const listItem = checkbox.parentNode;
+  console.log(listItem);
+  if (checked) {
+    console.log("checked");
+    listItem.className = 'checked';
+  } else {
+    console.log("not checked");
+    listItem.className = '';
+  }
+const checkedClass = document.getElementsByClassName('checked');
+console.log(checkedClass);
+console.log(checkedClass[0]);
+if(checkedClass[1] == "checked" ) {
+  console.log('is it checked');
+} 
+});
+
+
